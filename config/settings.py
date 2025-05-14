@@ -12,7 +12,7 @@ SECRET_KEY = ''
 DEBUG = True
 
 ALLOWED_HOSTS = []
-SESSION_COOKIE_SECURE = True  # HTTPS فقط
+SESSION_COOKIE_SECURE = True  
 CSRF_COOKIE_SECURE = True
 
 # Application definition
@@ -42,7 +42,7 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'accounts.middlewares.RestrictAdminUserInFrontend',
-    'axes.middleware.AxesMiddleware',  # أضف هذا السطر
+    'axes.middleware.AxesMiddleware', 
     
 ]
 
@@ -80,16 +80,16 @@ DATABASES = {
 # Password validation
 AUTH_PASSWORD_VALIDATORS = [
     {
-        'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',
+        'NAME': '',
     },
     {
-        'NAME': 'django.contrib.auth.password_validation.MinimumLengthValidator',
+        'NAME': '',
     },
     {
-        'NAME': 'django.contrib.auth.password_validation.CommonPasswordValidator',
+        'NAME': '',
     },
     {
-        'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
+        'NAME': '',
     },
 ]
 
@@ -100,12 +100,12 @@ USE_I18N = True
 USE_TZ = True
 
 # Email settings
-EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_BACKEND = ''
+EMAIL_HOST = ''
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
-EMAIL_HOST_USER = 'mohamedayman12301@gmail.com'
-EMAIL_HOST_PASSWORD = 'pmko ides bakj yvnx'
+EMAIL_HOST_USER = ''
+EMAIL_HOST_PASSWORD = ''
 DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
 
 # Static files
@@ -129,7 +129,7 @@ STRIPE_SECRET_KEY = ''
 STRIPE_WEBHOOK_SECRET = ''
 # Authentication backends
 AUTHENTICATION_BACKENDS = [
-    'axes.backends.AxesStandaloneBackend',  # معدل من AxesBackend
+    'axes.backends.AxesStandaloneBackend',  # AxesBackend
     'django.contrib.auth.backends.ModelBackend',
 ]
 
